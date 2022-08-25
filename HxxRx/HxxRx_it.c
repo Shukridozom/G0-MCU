@@ -79,7 +79,7 @@ void USART1_IRQHandler(void){
 /**
  * @brief This function handles USART2 global interrupt / USART2 wake-up interrupt through EXTI line 26.
  */
-void USART2_IRQHandler(void){
+void USART2_LPUART2_IRQHandler(void){
 	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
 	
 #if defined (_Usart2)	
@@ -97,7 +97,8 @@ void USART2_IRQHandler(void){
 /**
  * @brief This function handles USART3 to USART8 global interrupts / USART3 wake-up interrupt through EXTI line 28.
  */
-void USART3_8_IRQHandler(void){
+
+void USART3_4_5_6_LPUART1_IRQHandler(void){
 	portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
 	
 #if defined (_Usart3)

@@ -55,14 +55,14 @@ void DMA_Init(void){
 	DMA_MSG_RX_CH_Init(&msgRxDMA[2],DMA1_Channel5);
 #endif
 #ifdef _P4		
-	DMA_MSG_RX_CH_Init(&msgRxDMA[3],DMA1_Channel6);
+	//DMA_MSG_RX_CH_Init(&msgRxDMA[3],DMA1_Channel6);
 #endif
 #ifdef _P5		
 	DMA_MSG_RX_CH_Init(&msgRxDMA[4],DMA2_Channel2);
 #endif
-#ifdef _P6		
+#ifdef _P6
 	DMA_MSG_RX_CH_Init(&msgRxDMA[5],DMA2_Channel3);
-#endif	
+#endif
 	
 	/* Initialize messaging TX DMAs x 3 */
 	DMA_MSG_TX_CH_Init(&msgTxDMA[0],DMA1_Channel2);
@@ -172,10 +172,10 @@ void SetupMessagingRxDMAs(void){
 	if(portStatus[P5] == FREE)
 		DMA_MSG_RX_Setup(P5uart,&msgRxDMA[4]);
 #endif
-#ifdef _P6		
-	if(portStatus[P6] == FREE)
-		DMA_MSG_RX_Setup(P6uart,&msgRxDMA[5]);
-#endif					
+//#ifdef _P6
+	//if(portStatus[P6] == FREE)
+	//	DMA_MSG_RX_Setup(P6uart,&msgRxDMA[5]);
+//#endif
 }
 
 /*-----------------------------------------------------------*/
@@ -254,7 +254,7 @@ void DMA_STREAM_Setup(UART_HandleTypeDef *huartSrc,UART_HandleTypeDef *huartDst,
 	/* Start DMA stream	*/
 	huartSrc->gState =HAL_UART_STATE_READY;
 	//HAL_UART_Receive_DMA(huartSrc,(uint8_t* )(&(huartDst->Instance->TDR)),num);
-	//HAL_UART_Receive_IT(huart1,(uint8_t* )&Rx_Data[GetPort(huart) - 1] , 1);
+	//HAL_UART_Receive_IT(huartSrc,(uint8_t* )&Rx_Data[GetPort(huart) - 1] , 1);
 }
 
 /*-----------------------------------------------------------*/

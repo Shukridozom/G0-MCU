@@ -51,7 +51,6 @@
 #define __VTOR_PRESENT            1U /*!< Vector  Table  Register supported             */
 #define __NVIC_PRIO_BITS          2U /*!< STM32G0xx uses 2 Bits for the Priority Levels */
 #define __Vendor_SysTickConfig    0U /*!< Set to 1 if different SysTick Config is used  */
-
 /**
   * @}
   */

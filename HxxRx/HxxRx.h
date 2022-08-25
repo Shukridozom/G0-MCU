@@ -54,8 +54,8 @@
 
 /* Port-UART mapping */
 
-#define P1uart &huart6
-#define P2uart &huart2
+#define P1uart &huart2
+#define P2uart &huart6
 #define P3uart &huart3
 #define P4uart &huart1
 #define P5uart &huart5

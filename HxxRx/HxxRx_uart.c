@@ -182,25 +182,25 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 #ifdef _Usart2
 		/* Peripheral clock enable */
 		__USART2_CLK_ENABLE()
-		;
+				;
 		
 		/* USART2 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART2_TX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART2_AF;
 		HAL_GPIO_Init(USART2_TX_PORT,&GPIO_InitStruct);
 		
 		GPIO_InitStruct.Pin = USART2_RX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART2_AF;
 		HAL_GPIO_Init(USART2_RX_PORT,&GPIO_InitStruct);
 		
 		/* Peripheral interrupt init*/
-		HAL_NVIC_SetPriority(USART2_LPUART2_IRQn,1,0);
+		HAL_NVIC_SetPriority(USART2_LPUART2_IRQn,0,0);
 		//TOBECHECKED
 		HAL_NVIC_EnableIRQ(USART2_LPUART2_IRQn);
 		//TOBECHECKED
@@ -228,9 +228,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		HAL_GPIO_Init(USART3_RX_PORT,&GPIO_InitStruct);
 		
 		/* Peripheral interrupt init*/
-		//HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
+		HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
 		//TOBECHECKED
-		//HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
+		HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
 		//TOBECHECKED
 #endif
 	}
@@ -256,8 +256,8 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		HAL_GPIO_Init(USART4_RX_PORT,&GPIO_InitStruct);
 		
 		/* Peripheral interrupt init*/
-		//HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
-		//HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
+		HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
+		HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
 		//TOBECHECKED
 #endif
 	}
@@ -283,8 +283,8 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		HAL_GPIO_Init(USART5_RX_PORT,&GPIO_InitStruct);
 		
 		/* Peripheral interrupt init*/
-		//HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
-		//HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
+		HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
+		HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
 		//TOBECHECKED
 #endif
 	}
@@ -310,8 +310,8 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		HAL_GPIO_Init(USART6_RX_PORT,&GPIO_InitStruct);
 		
 		/* Peripheral interrupt init*/
-		//HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
-		//HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
+		HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
+		HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
 		//TOBECHECKED
 #endif
 	}
