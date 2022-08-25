@@ -188,10 +188,10 @@ void DMA_MSG_RX_Setup(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 
 	/* Setup DMA interrupts */
 	SetupDMAInterrupts(hDMA,MSG_DMA_INT_PRIORITY);
-	
-	/* Start DMA stream	*/
-	HAL_UART_Receive_DMA(huart,(uint8_t* )&Rx_Data[GetPort(huart) - 1] , 1);
 
+	/* Start DMA stream	*/
+	//HAL_UART_Receive_DMA(huart,(uint8_t* )&Rx_Data[GetPort(huart) - 1] , 1);
+	HAL_UART_Receive_IT(huart,(uint8_t* )&Rx_Data[GetPort(huart) - 1] , 1);
 	//HAL_UART_Receive_DMA(huart,(uint8_t* )&UARTRxBuf[GetPort(huart) - 1],
 	//MSG_RX_BUF_SIZE);
 }
@@ -247,13 +247,14 @@ void DMA_STREAM_Setup(UART_HandleTypeDef *huartSrc,UART_HandleTypeDef *huartDst,
 	
 	/* Remap and link to UART RX */
 	RemapAndLinkDMAtoUARTRx(huartSrc,hDMA);
-	
+
 	/* Setup DMA interrupts */
 	SetupDMAInterrupts(hDMA,STREAM_DMA_INT_PRIORITY);
 	
 	/* Start DMA stream	*/
 	huartSrc->gState =HAL_UART_STATE_READY;
-	HAL_UART_Receive_DMA(huartSrc,(uint8_t* )(&(huartDst->Instance->TDR)),num);
+	//HAL_UART_Receive_DMA(huartSrc,(uint8_t* )(&(huartDst->Instance->TDR)),num);
+	//HAL_UART_Receive_IT(huart1,(uint8_t* )&Rx_Data[GetPort(huart) - 1] , 1);
 }
 
 /*-----------------------------------------------------------*/
@@ -413,7 +414,7 @@ void RemapAndLinkDMAtoUARTRx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART1 && hDMA->Instance == DMA2_Channel3){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH3_USART1_RX);
-		// USART 2	
+		// USART 2
 	}
 	else if(huart->Instance == USART2 && hDMA->Instance == DMA1_Channel1){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH1_USART2_RX);
@@ -432,7 +433,7 @@ void RemapAndLinkDMAtoUARTRx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART2 && hDMA->Instance == DMA2_Channel3){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH3_USART2_RX);
-		// USART 3	
+		// USART 3
 	}
 	else if(huart->Instance == USART3 && hDMA->Instance == DMA1_Channel1){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH1_USART3_RX);
@@ -451,7 +452,7 @@ void RemapAndLinkDMAtoUARTRx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART3 && hDMA->Instance == DMA2_Channel3){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH3_USART3_RX);
-		// USART 4	
+		// USART 4
 	}
 	else if(huart->Instance == USART4 && hDMA->Instance == DMA1_Channel1){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH1_USART4_RX);
@@ -470,7 +471,7 @@ void RemapAndLinkDMAtoUARTRx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART4 && hDMA->Instance == DMA2_Channel3){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH3_USART4_RX);
-		// USART 5	
+		// USART 5
 	}
 	else if(huart->Instance == USART5 && hDMA->Instance == DMA1_Channel1){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH1_USART5_RX);
@@ -489,7 +490,7 @@ void RemapAndLinkDMAtoUARTRx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART5 && hDMA->Instance == DMA2_Channel3){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH3_USART5_RX);
-		// USART 6	
+		// USART 6
 	}
 	else if(huart->Instance == USART6 && hDMA->Instance == DMA1_Channel1){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH1_USART6_RX);
@@ -508,7 +509,7 @@ void RemapAndLinkDMAtoUARTRx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART6 && hDMA->Instance == DMA2_Channel3){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH3_USART6_RX);
-		// USART 7	
+		// USART 7
 	}
 	else if(huart->Instance == USART7 && hDMA->Instance == DMA1_Channel1){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH1_USART7_RX);
@@ -527,7 +528,7 @@ void RemapAndLinkDMAtoUARTRx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART7 && hDMA->Instance == DMA2_Channel3){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH3_USART7_RX);
-		// USART 8	
+		// USART 8
 	}
 	else if(huart->Instance == USART8 && hDMA->Instance == DMA1_Channel1){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH1_USART8_RX);
@@ -574,7 +575,7 @@ void RemapAndLinkDMAtoUARTTx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART1 && hDMA->Instance == DMA2_Channel5){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH5_USART1_TX);
-		// USART 2	
+		// USART 2
 	}
 	else if(huart->Instance == USART2 && hDMA->Instance == DMA1_Channel2){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH2_USART2_TX);
@@ -593,7 +594,7 @@ void RemapAndLinkDMAtoUARTTx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART2 && hDMA->Instance == DMA2_Channel5){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH5_USART2_TX);
-		// USART 3	
+		// USART 3
 	}
 	else if(huart->Instance == USART3 && hDMA->Instance == DMA1_Channel2){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH2_USART3_TX);
@@ -612,7 +613,7 @@ void RemapAndLinkDMAtoUARTTx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART3 && hDMA->Instance == DMA2_Channel5){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH5_USART3_TX);
-		// USART 4	
+		// USART 4
 	}
 	else if(huart->Instance == USART4 && hDMA->Instance == DMA1_Channel2){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH2_USART4_TX);
@@ -631,7 +632,7 @@ void RemapAndLinkDMAtoUARTTx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART4 && hDMA->Instance == DMA2_Channel5){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH5_USART4_TX);
-		// USART 5	
+		// USART 5
 	}
 	else if(huart->Instance == USART5 && hDMA->Instance == DMA1_Channel2){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH2_USART5_TX);
@@ -650,7 +651,7 @@ void RemapAndLinkDMAtoUARTTx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART5 && hDMA->Instance == DMA2_Channel5){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH5_USART5_TX);
-		// USART 6	
+		// USART 6
 	}
 	else if(huart->Instance == USART6 && hDMA->Instance == DMA1_Channel2){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH2_USART6_TX);
@@ -669,7 +670,7 @@ void RemapAndLinkDMAtoUARTTx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART6 && hDMA->Instance == DMA2_Channel5){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH5_USART6_TX);
-		// USART 7	
+		// USART 7
 	}
 	else if(huart->Instance == USART7 && hDMA->Instance == DMA1_Channel2){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH2_USART7_TX);
@@ -688,7 +689,7 @@ void RemapAndLinkDMAtoUARTTx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	}
 	else if(huart->Instance == USART7 && hDMA->Instance == DMA2_Channel5){
 		__HAL_DMA2_REMAP(HAL_DMA2_CH5_USART7_TX);
-		// USART 8	
+		// USART 8
 	}
 	else if(huart->Instance == USART8 && hDMA->Instance == DMA1_Channel2){
 		__HAL_DMA1_REMAP(HAL_DMA1_CH2_USART8_TX);

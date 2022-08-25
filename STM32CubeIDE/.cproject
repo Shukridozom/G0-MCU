@@ -61,9 +61,9 @@
                             							
                             <option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.runtimelibrary_c.1219684849" name="Runtime library" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.runtimelibrary_c" useByScannerDiscovery="true" value="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.runtimelibrary_c.value.standard_c" valueType="enumerated"/>
                             							
-                            <option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.nanoprintffloat.225257120" name="Use float with printf from newlib-nano (-u _printf_float)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.nanoprintffloat" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+                            <option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.nanoprintffloat.225257120" name="Use float with printf from newlib-nano (-u _printf_float)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.nanoprintffloat" useByScannerDiscovery="false" value="true" valueType="boolean"/>
                             							
-                            <option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.nanoscanffloat.1351522042" name="Use float with scanf from newlib-nano (-u _scanf_float)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.nanoscanffloat" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+                            <option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.nanoscanffloat.1351522042" name="Use float with scanf from newlib-nano (-u _scanf_float)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.nanoscanffloat" useByScannerDiscovery="false" value="true" valueType="boolean"/>
                             							
                             <option id="com.st.stm32cube.ide.mcu.option.internal.toolchain.default.453327961" name="Internal Toolchain Default" superClass="com.st.stm32cube.ide.mcu.option.internal.toolchain.default" useByScannerDiscovery="false" value="false" valueType="boolean"/>
                             							
@@ -229,9 +229,9 @@
     	
     <storageModule moduleId="refreshScope" versionNumber="2">
         		
-        <configuration configurationName="Module2"/>
-        		
         <configuration configurationName="HxxRxx"/>
+        		
+        <configuration configurationName="Module2"/>
         		
         <configuration configurationName="Module 1">
             			

@@ -141,6 +141,7 @@ uint8_t SaveToRO(void){
 	if(myID){
 		temp =(uint16_t )(N << 8) + myID;
 		//HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD,RO_START_ADDRESS,temp);
+		HAL_FLASH_Program(FLASH_TYPEPROGRAM_DOUBLEWORD,RO_START_ADDRESS,temp);
 		//TOBECHECKED
 		FlashStatus =FLASH_WaitForLastOperation((uint32_t ) HAL_FLASH_TIMEOUT_VALUE);
 		if(FlashStatus != HAL_OK){
