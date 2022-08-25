@@ -7,7 +7,7 @@
  */
 /* Includes ------------------------------------------------------------------*/
 #include "BOS.h"
-
+uint8_t x;
 /* Private variables ---------------------------------------------------------*/
 
 /* Private function prototypes -----------------------------------------------*/
@@ -26,14 +26,14 @@ int main(void){
 
 /* User Task */
 void UserTask(void *argument){
-
+x=5;
 
 	// put your code here, to run repeatedly.
 	while(1){
-		IND_toggle();
+	//	IND_toggle();
+		HAL_USART_Transmit&huart5, x, 3, 1000);
 
-
-			StartMilliDelay(1000);
+			//StartMilliDelay(1000);
 
 	}
 }
