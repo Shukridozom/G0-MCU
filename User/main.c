@@ -30,7 +30,7 @@ int main(void){
 
 /* User Task */
 void UserTask(void *argument){
-
+y=6;
 
 
 
@@ -38,7 +38,7 @@ void UserTask(void *argument){
 	// put your code here, to run repeatedly.
 	while(1){
 
-
+		//HAL_UART_Transmit(&huart4, y, 4, 1000);
 
 
 	}
