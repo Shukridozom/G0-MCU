@@ -184,10 +184,12 @@ void SetupMessagingRxDMAs(void){
  */
 void DMA_MSG_RX_Setup(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA){
 	/* Remap and link to UART Rx */
-	RemapAndLinkDMAtoUARTRx(huart,hDMA);
+//	RemapAndLinkDMAtoUARTRx(huart,hDMA);
+	//TOBECHECKED
 
 	/* Setup DMA interrupts */
-	SetupDMAInterrupts(hDMA,MSG_DMA_INT_PRIORITY);
+//	SetupDMAInterrupts(hDMA,MSG_DMA_INT_PRIORITY);
+	//TOBECHECKED
 
 	/* Start DMA stream	*/
 	//HAL_UART_Receive_DMA(huart,(uint8_t* )&Rx_Data[GetPort(huart) - 1] , 1);

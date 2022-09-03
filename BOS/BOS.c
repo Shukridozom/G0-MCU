@@ -911,7 +911,7 @@ void BOS_Init(void){
 	
 	/* Initialize all configured peripherals */
 	GPIO_Init();
-	DMA_Init();
+//	DMA_Init();
 	TIM_USEC_Init();
 	CRC_Init();
 	TIM_MSEC_Init();
