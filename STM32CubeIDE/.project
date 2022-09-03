@@ -1028,10 +1028,5 @@
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Thirdparty/STM32G0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h</locationURI>
 		</link>
-		<link>
-			<name>Thirdparty/Middleware/STM32G0xx/FreeRTOS/Source/FreeRTOS_CLI.c</name>
-			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/FreeRTOS_CLI.c</locationURI>
-		</link>
 	</linkedResources>
 </projectDescription>
