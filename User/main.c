@@ -9,9 +9,7 @@
 #include "BOS.h"
 
 /* Private variables ---------------------------------------------------------*/
-int Number[1];
-uint8_t y;
-uint8_t x;
+
 /* Private function prototypes -----------------------------------------------*/
 
 /* Main function ------------------------------------------------------------*/
@@ -30,15 +28,12 @@ int main(void){
 
 /* User Task */
 void UserTask(void *argument){
-y=6;
-
 
 
 
 	// put your code here, to run repeatedly.
 	while(1){
 
-		//HAL_UART_Transmit(&huart4, y, 4, 1000);
 
 
 	}
