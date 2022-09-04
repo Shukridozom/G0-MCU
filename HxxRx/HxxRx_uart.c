@@ -160,14 +160,14 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		/* USART1 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART1_TX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART1_AF;
 		HAL_GPIO_Init(USART1_TX_PORT,&GPIO_InitStruct);
 		
 		GPIO_InitStruct.Pin = USART1_RX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART1_AF;
 		HAL_GPIO_Init(USART1_RX_PORT,&GPIO_InitStruct);
@@ -198,7 +198,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		HAL_GPIO_Init(USART2_RX_PORT,&GPIO_InitStruct);
 		
 		/* Peripheral interrupt init*/
-		HAL_NVIC_SetPriority(USART2_LPUART2_IRQn,0,0);
+		HAL_NVIC_SetPriority(USART2_LPUART2_IRQn,1,0);
 		//TOBECHECKED
 		HAL_NVIC_EnableIRQ(USART2_LPUART2_IRQn);
 		//TOBECHECKED
@@ -212,14 +212,14 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		/* USART3 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART3_TX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART3_AF;
 		HAL_GPIO_Init(USART3_TX_PORT,&GPIO_InitStruct);
 		
 		GPIO_InitStruct.Pin = USART3_RX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART3_AF;
 		HAL_GPIO_Init(USART3_RX_PORT,&GPIO_InitStruct);
@@ -239,20 +239,20 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		/* USART4 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART4_TX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART4_AF;
 		HAL_GPIO_Init(USART4_TX_PORT,&GPIO_InitStruct);
 		
 		GPIO_InitStruct.Pin = USART4_RX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART4_AF;
 		HAL_GPIO_Init(USART4_RX_PORT,&GPIO_InitStruct);
 		
 		/* Peripheral interrupt init*/
-		HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,0,0);
+		HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
 		HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
 		//TOBECHECKED
 #endif
@@ -265,20 +265,20 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		/* USART5 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART5_TX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART5_AF;
 		HAL_GPIO_Init(USART5_TX_PORT,&GPIO_InitStruct);
 		
 		GPIO_InitStruct.Pin = USART5_RX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART5_AF;
 		HAL_GPIO_Init(USART5_RX_PORT,&GPIO_InitStruct);
 		
 		/* Peripheral interrupt init*/
-		HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,0,0);
+		HAL_NVIC_SetPriority(USART3_4_5_6_LPUART1_IRQn,1,0);
 		HAL_NVIC_EnableIRQ(USART3_4_5_6_LPUART1_IRQn);
 		//TOBECHECKED
 #endif
@@ -291,14 +291,14 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 		/* USART6 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART6_TX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART6_AF;
 		HAL_GPIO_Init(USART6_TX_PORT,&GPIO_InitStruct);
 		
 		GPIO_InitStruct.Pin = USART6_RX_PIN;
 		GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
 		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
 		GPIO_InitStruct.Alternate = USART6_AF;
 		HAL_GPIO_Init(USART6_RX_PORT,&GPIO_InitStruct);
