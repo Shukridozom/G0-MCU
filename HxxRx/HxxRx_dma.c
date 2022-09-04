@@ -55,7 +55,7 @@ void DMA_Init(void){
 	DMA_MSG_RX_CH_Init(&msgRxDMA[2],DMA1_Channel5);
 #endif
 #ifdef _P4		
-	//DMA_MSG_RX_CH_Init(&msgRxDMA[3],DMA1_Channel6);
+	DMA_MSG_RX_CH_Init(&msgRxDMA[3],DMA1_Channel6);
 #endif
 #ifdef _P5		
 	DMA_MSG_RX_CH_Init(&msgRxDMA[4],DMA2_Channel2);

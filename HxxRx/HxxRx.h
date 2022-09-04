@@ -54,12 +54,12 @@
 
 /* Port-UART mapping */
 
-#define P1uart &huart2
-#define P2uart &huart6
+#define P1uart &huart4
+#define P2uart &huart2
 #define P3uart &huart3
 #define P4uart &huart1
 #define P5uart &huart5
-#define P6uart &huart4
+#define P6uart &huart6
 
 
 /* Port Definitions */

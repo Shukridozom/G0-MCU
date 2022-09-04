@@ -153,10 +153,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 	
 	GPIO_InitTypeDef GPIO_InitStruct;
 	if(huart->Instance == USART1){
-#ifdef _Usart1
+	#ifdef _Usart1
 		/* Peripheral clock enable */
-		__USART1_CLK_ENABLE()
-		;
+		__USART1_CLK_ENABLE();
 		
 		/* USART1 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART1_TX_PIN;
@@ -179,10 +178,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 #endif
 	}
 	else if(huart->Instance == USART2){
-#ifdef _Usart2
+	#ifdef _Usart2
 		/* Peripheral clock enable */
-		__USART2_CLK_ENABLE()
-				;
+		__USART2_CLK_ENABLE();
 		
 		/* USART2 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART2_TX_PIN;
@@ -207,10 +205,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 #endif
 	}
 	else if(huart->Instance == USART3){
-#ifdef _Usart3
+	#ifdef _Usart3
 		/* Peripheral clock enable */
-		__USART3_CLK_ENABLE()
-		;
+		__USART3_CLK_ENABLE();
 		
 		/* USART3 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART3_TX_PIN;
@@ -235,10 +232,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 #endif
 	}
 	else if(huart->Instance == USART4){
-#ifdef _Usart4
+	#ifdef _Usart4
 		/* Peripheral clock enable */
-		__USART4_CLK_ENABLE()
-		;
+		__USART4_CLK_ENABLE();
 		
 		/* USART4 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART4_TX_PIN;
@@ -262,10 +258,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 #endif
 	}
 	else if(huart->Instance == USART5){
-#ifdef _Usart5
+	#ifdef _Usart5
 		/* Peripheral clock enable */
-		__USART5_CLK_ENABLE()
-		;
+		__USART5_CLK_ENABLE();
 		
 		/* USART5 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART5_TX_PIN;
@@ -289,10 +284,9 @@ void HAL_UART_MspInit(UART_HandleTypeDef *huart){
 #endif
 	}
 	else if(huart->Instance == USART6){
-#ifdef _Usart6
+	#ifdef _Usart6
 		/* Peripheral clock enable */
-		__USART6_CLK_ENABLE()
-		;
+		__USART6_CLK_ENABLE();
 		
 		/* USART6 GPIO Configuration */
 		GPIO_InitStruct.Pin = USART6_TX_PIN;
