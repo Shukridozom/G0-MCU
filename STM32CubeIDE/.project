@@ -199,9 +199,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_uart.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/startup_stm32g0b1retx.s</name>
+			<name>HxxRx/startup_stm32g0b1ceuxn.s</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/startup_stm32g0b1retx.s</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/startup_stm32g0b1ceuxn.s</locationURI>
 		</link>
 		<link>
 			<name>HxxRx/stm32g0xx_hal_conf.h</name>
