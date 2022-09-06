@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>HxxRxx</name>
+	<name>H3BR6x</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -34,7 +34,7 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>HxxRx</name>
+			<name>H3BR6</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -119,94 +119,94 @@
 			<locationURI>PARENT-1-PROJECT_LOC/BOS/FreeRTOSConfig.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx.c</name>
+			<name>H3BR6/H3BR6.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx.h</name>
+			<name>H3BR6/H3BR6.h</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_MemoryMap.h</name>
+			<name>H3BR6/H3BR6_MemoryMap.h</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_MemoryMap.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_MemoryMap.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_dma.c</name>
+			<name>H3BR6/H3BR6_dma.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_dma.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_dma.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_dma.h</name>
+			<name>H3BR6/H3BR6_dma.h</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_dma.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_dma.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_eeprom.c</name>
+			<name>H3BR6/H3BR6_eeprom.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_eeprom.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_eeprom.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_eeprom.h</name>
+			<name>H3BR6/H3BR6_eeprom.h</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_eeprom.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_eeprom.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_gpio.c</name>
+			<name>H3BR6/H3BR6_gpio.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_gpio.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_gpio.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_gpio.h</name>
+			<name>H3BR6/H3BR6_gpio.h</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_gpio.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_gpio.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_inputs.c</name>
+			<name>H3BR6/H3BR6_inputs.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_inputs.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_inputs.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_inputs.h</name>
+			<name>H3BR6/H3BR6_inputs.h</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_inputs.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_inputs.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_it.c</name>
+			<name>H3BR6/H3BR6_it.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_it.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_it.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_rtc.c</name>
+			<name>H3BR6/H3BR6_rtc.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_rtc.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_rtc.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_timers.c</name>
+			<name>H3BR6/H3BR6_timers.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_timers.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_timers.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_uart.c</name>
+			<name>H3BR6/H3BR6_uart.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_uart.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_uart.c</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/HxxRx_uart.h</name>
+			<name>H3BR6/H3BR6_uart.h</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/HxxRx_uart.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/H3BR6_uart.h</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/startup_stm32g0b1ceuxn.s</name>
+			<name>H3BR6/startup_stm32g0b1ceuxn.s</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/startup_stm32g0b1ceuxn.s</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/startup_stm32g0b1ceuxn.s</locationURI>
 		</link>
 		<link>
-			<name>HxxRx/stm32g0xx_hal_conf.h</name>
+			<name>H3BR6/stm32g0xx_hal_conf.h</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/HxxRx/stm32g0xx_hal_conf.h</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/H3BR6/stm32g0xx_hal_conf.h</locationURI>
 		</link>
 		<link>
 			<name>Thirdparty/.git</name>
