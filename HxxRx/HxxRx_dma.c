@@ -40,39 +40,39 @@ void RemapAndLinkDMAtoUARTTx(UART_HandleTypeDef *huart,DMA_HandleTypeDef *hDMA);
  * Initialize the DMAs
  */
 void DMA_Init(void){
-	/* DMA controller clock enable */
-	__DMA1_CLK_ENABLE();
-	__DMA2_CLK_ENABLE();
-	
-	/* Initialize messaging RX DMAs x 6 - Update for non-standard MCUs */
-#ifdef _P1
-	DMA_MSG_RX_CH_Init(&msgRxDMA[0],DMA1_Channel1);
-#endif
-#ifdef _P2	
-	DMA_MSG_RX_CH_Init(&msgRxDMA[1],DMA1_Channel3);
-#endif
-#ifdef _P3		
-	DMA_MSG_RX_CH_Init(&msgRxDMA[2],DMA1_Channel5);
-#endif
-#ifdef _P4		
-	DMA_MSG_RX_CH_Init(&msgRxDMA[3],DMA1_Channel6);
-#endif
-#ifdef _P5		
-	DMA_MSG_RX_CH_Init(&msgRxDMA[4],DMA2_Channel2);
-#endif
-#ifdef _P6
-	DMA_MSG_RX_CH_Init(&msgRxDMA[5],DMA2_Channel3);
-#endif
-	
-	/* Initialize messaging TX DMAs x 3 */
-	DMA_MSG_TX_CH_Init(&msgTxDMA[0],DMA1_Channel2);
-	DMA_MSG_TX_CH_Init(&msgTxDMA[1],DMA1_Channel4);
-	DMA_MSG_TX_CH_Init(&msgTxDMA[2],DMA1_Channel7);
-	
-	/* Initialize streaming RX DMAs x 0 */
-	// No more channels. Dynamically reconfigure from messaging RX DMAs.
-	/* Initialize frontend DMAs x 3 - Update for each module */
-	//DMA_FRONTEND_CH_Init(&frontendDMA[0], DMA2_Channel5);
+//	/* DMA controller clock enable */
+//	__DMA1_CLK_ENABLE();
+//	__DMA2_CLK_ENABLE();
+//
+//	/* Initialize messaging RX DMAs x 6 - Update for non-standard MCUs */
+//#ifdef _P1
+//	DMA_MSG_RX_CH_Init(&msgRxDMA[0],DMA1_Channel1);
+//#endif
+//#ifdef _P2
+//	DMA_MSG_RX_CH_Init(&msgRxDMA[1],DMA1_Channel3);
+//#endif
+//#ifdef _P3
+//	DMA_MSG_RX_CH_Init(&msgRxDMA[2],DMA1_Channel5);
+//#endif
+//#ifdef _P4
+//	DMA_MSG_RX_CH_Init(&msgRxDMA[3],DMA1_Channel6);
+//#endif
+//#ifdef _P5
+//	DMA_MSG_RX_CH_Init(&msgRxDMA[4],DMA2_Channel2);
+//#endif
+//#ifdef _P6
+//	DMA_MSG_RX_CH_Init(&msgRxDMA[5],DMA2_Channel3);
+//#endif
+//
+//	/* Initialize messaging TX DMAs x 3 */
+//	DMA_MSG_TX_CH_Init(&msgTxDMA[0],DMA1_Channel2);
+//	DMA_MSG_TX_CH_Init(&msgTxDMA[1],DMA1_Channel4);
+//	DMA_MSG_TX_CH_Init(&msgTxDMA[2],DMA1_Channel7);
+//
+//	/* Initialize streaming RX DMAs x 0 */
+//	// No more channels. Dynamically reconfigure from messaging RX DMAs.
+//	/* Initialize frontend DMAs x 3 - Update for each module */
+//	//DMA_FRONTEND_CH_Init(&frontendDMA[0], DMA2_Channel5);
 }
 
 /*-----------------------------------------------------------*/
