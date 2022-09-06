@@ -2,14 +2,14 @@
  BitzOS (BOS) V0.2.7 - Copyright (C) 2017-2022 Hexabitz
  All rights reserved
  
- File Name     : HxxRx_dma.h
+ File Name     : H3BR6_dma.h
  Description   : Header file contains Peripheral DMA setup.
 
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef HxxRx_dma_H
-#define HxxRx_dma_H
+#ifndef H3BR6_dma_H
+#define H3BR6_dma_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -50,6 +50,6 @@ extern void SwitchStreamDMAToMsg(uint8_t port);
 }
 #endif
 
-#endif /* HxxRx_dma_H */
+#endif /* H3BR6_dma_H */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -2,14 +2,14 @@
  BitzOS (BOS) V0.2.7 - Copyright (C) 2017-2022 Hexabitz
  All rights reserved
  
- File Name     : HxxRx_MemoryMap.h
+ File Name     : H3BR6_MemoryMap.h
  Description   : Module MCU memory map header file.
 
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef HxxRx_MEMORYMAP_H
-#define HxxRx_MEMORYMAP_H
+#ifndef H3BR6_MEMORYMAP_H
+#define H3BR6_MEMORYMAP_H
 
 #ifdef __cplusplus
  extern "C" {
@@ -33,6 +33,6 @@
 }
 #endif
 
-#endif /* HxxRx_MEMORYMAP_H */
+#endif /* H3BR6_MEMORYMAP_H */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

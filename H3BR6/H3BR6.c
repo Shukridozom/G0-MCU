@@ -2,8 +2,8 @@
  BitzOS (BOS) V0.2.7 - Copyright (C) 2017-2022 Hexabitz
  All rights reserved
 
- File Name     : HxxRx.c
- Description   : Source code for module HxxRx.
+ File Name     : H3BR6.c
+ Description   : Source code for module H3BR6.
  	 	 	 	 (Description_of_module)
 
 (Description of Special module peripheral configuration):
@@ -15,7 +15,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "BOS.h"
-#include "HxxRx_inputs.h"
+#include "H3BR6_inputs.h"
 /* Define UART variables */
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
@@ -295,7 +295,7 @@ void SetupPortForRemoteBootloaderUpdate(uint8_t port){
 	__HAL_UART_ENABLE_IT(huart,UART_IT_RXNE);
 }
 
-/* --- HxxRx module initialization.
+/* --- H3BR6 module initialization.
  */
 void Module_Peripheral_Init(void){
 
@@ -312,16 +312,16 @@ void Module_Peripheral_Init(void){
 }
 
 /*-----------------------------------------------------------*/
-/* --- HxxRx message processing task.
+/* --- H3BR6 message processing task.
  */
 Module_Status Module_MessagingTask(uint16_t code,uint8_t port,uint8_t src,uint8_t dst,uint8_t shift){
-	Module_Status result =HxxRx_OK;
+	Module_Status result =H3BR6_OK;
 
 
 	switch(code){
 
 		default:
-			result =HxxRx_ERR_UnknownMessage;
+			result =H3BR6_ERR_UnknownMessage;
 			break;
 	}
 	

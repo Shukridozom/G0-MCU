@@ -2,8 +2,8 @@
  BitzOS (BOS) V0.2.7 - Copyright (C) 2017-2022 Hexabitz
  All rights reserved
  
- File Name     : HxxRx.h
- Description   : Header file for module HxxRx.
+ File Name     : H3BR6.h
+ Description   : Header file for module H3BR6.
  	 	 	 	 (Description_of_module)
 
 (Description of Special module peripheral configuration):
@@ -14,20 +14,20 @@
  */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef HxxRx_H
-#define HxxRx_H
+#ifndef H3BR6_H
+#define H3BR6_H
 
 /* Includes ------------------------------------------------------------------*/
 #include "BOS.h"
-#include "HxxRx_MemoryMap.h"
-#include "HxxRx_uart.h"
-#include "HxxRx_gpio.h"
-#include "HxxRx_dma.h"
-#include "HxxRx_inputs.h"
-#include "HxxRx_eeprom.h"
+#include "H3BR6_MemoryMap.h"
+#include "H3BR6_uart.h"
+#include "H3BR6_gpio.h"
+#include "H3BR6_dma.h"
+#include "H3BR6_inputs.h"
+#include "H3BR6_eeprom.h"
 /* Exported definitions -------------------------------------------------------*/
 
-#define	modulePN		_HxxRx
+#define	modulePN		_H3BR6
 
 
 /* Port-related definitions */
@@ -110,10 +110,10 @@
 
 /* Module_Status Type Definition */
 typedef enum {
-	HxxRx_OK =0,
-	HxxRx_ERR_UnknownMessage,
-	HxxRx_ERR_WrongParams,
-	HxxRx_ERROR =255
+	H3BR6_OK =0,
+	H3BR6_ERR_UnknownMessage,
+	H3BR6_ERR_WrongParams,
+	H3BR6_ERROR =255
 } Module_Status;
 
 /* Indicator LED */
@@ -152,6 +152,6 @@ void remoteBootloaderUpdate(uint8_t src,uint8_t dst,uint8_t inport,uint8_t outpo
  */
 
 
-#endif /* HxxRx_H */
+#endif /* H3BR6_H */
 
 /************************ (C) COPYRIGHT HEXABITZ *****END OF FILE****/

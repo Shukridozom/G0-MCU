@@ -2,7 +2,7 @@
  BitzOS (BOS) V0.2.7 - Copyright (C) 2017-2022 Hexabitz
  All rights reserved
 
- File Name     : HxxRx_gpio.c
+ File Name     : H3BR6_gpio.c
  Description   : Source code provides code for the configuration of all used GPIO pins .
 
  */

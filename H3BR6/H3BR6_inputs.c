@@ -8,7 +8,7 @@
  */
 
 /* Includes ------------------------------------------------------------------*/
-#include "HxxRx_inputs.h"
+#include "H3BR6_inputs.h"
 
 /* Private and global variables ----------------------------------------------*/
 /* Buttons */
