@@ -24,6 +24,7 @@
 #else
 #include "stm32f0xx_hal.h"
 #endif
+
 /* Firmware */
 #define	_firmMajor			0
 #define	_firmMinor			2
@@ -59,7 +60,7 @@ enum UartDirection_e {
 };
 
 enum modulePartNumbers_e {
-	_H01R0 =1, _P01R0, _H23R0, _H23R1, _H23R3, _H07R3, _H08R6, _P08R6, _H09R0,_H09R9, _H1BR6, _H12R0, _H13R7, _H0FR1, _H0FR6, _H0FR7, _H1AR2, _H0AR9, _H1DR1, _H1DR5, _H0BR4, _H18R0, _H26R0, _H15R0, _H10R4, _H2AR3,_H41R6,_HxxRx
+	_H01R0 =1, _P01R0, _H23R0, _H23R1, _H23R3, _H07R3, _H08R6, _P08R6, _H09R0,_H09R9, _H1BR6, _H12R0, _H13R7, _H0FR1, _H0FR6, _H0FR7, _H1AR2, _H0AR9, _H1DR1, _H1DR5, _H0BR4, _H18R0, _H26R0, _H15R0, _H10R4, _H2AR3,_H41R6,_H3BR6,_H18R1
 };
 enum IndMode_e {
 	IND_OFF, IND_PING, IND_TOPOLOGY, IND_SHORT_BLINK
@@ -242,7 +243,7 @@ typedef struct {
 #define SNIP_COND_MODULE_PARAM_PARAM	            4
 
 /* BOS Parameters and constants */
-#define NUM_OF_MODULE_PN							31							//Number of Modules
+#define NUM_OF_MODULE_PN							32							//Number of Modules
 #define P_LAST 										NumOfPorts
 #define MAX_MESSAGE_SIZE							56							//Max Number of Bytes in One Message
 #define MAX_PARAMS_PER_MESSAGE				       (MAX_MESSAGE_SIZE-10)		// H + Z + length + Dst + Src + 1 x Options + 2 x Code + CRC + 1 x reserved = 10
@@ -342,8 +343,14 @@ typedef struct {
 #ifdef H13R7
 	#include "H13R7.h"
 #endif
-#if defined(H0FR1) || defined(H0FR6) || defined(H0FR7)
-#include "H0FR6.h"
+#ifdef H0FR1
+	#include "H0FR1.h"
+#endif
+#ifdef H0FR6
+	#include "H0FR6.h"
+#endif
+#ifdef H0FR7
+	#include "H0FR7.h"
 #endif
 #ifdef H1AR2
 	#include "H1AR0.h"	
@@ -381,8 +388,11 @@ typedef struct {
 #ifdef H41R6
 #include "H41R6.h"
 #endif
-#ifdef HxxRx
-#include "HxxRx.h"
+#ifdef H3BR6
+#include "H3BR6.h"
+#endif
+#ifdef H18R1
+#include "H18R1.h"
 #endif
 
 /* More BOS header files - must be defined after module headers */
